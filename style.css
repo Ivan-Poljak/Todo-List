@@ -1,0 +1,212 @@
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  background-color: #3c3f44;
+  color: #fff;
+}
+
+/* ----- HEADER ----- */
+
+header {
+  text-align: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgb(253, 127, 127);
+}
+
+.title {
+  font-size: clamp(2rem, 1rem + 10vw, 4rem);
+}
+
+/* ----- SECTION ----- */
+/* ----- FORM -----*/
+.input-container {
+  padding: 0 0.5rem;
+}
+#task,
+#submit {
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #07282c;
+  border: 1px solid rgb(253, 127, 127);
+  border-radius: 1rem;
+}
+
+#task::placeholder {
+  color: #fff;
+}
+
+#submit {
+  letter-spacing: 0.25rem;
+  font-weight: 700;
+
+  background-image: linear-gradient(
+    to right,
+    rgb(250, 47, 77),
+    rgb(252, 21, 252)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-image: linear-gradient(
+    to left,
+    rgb(250, 47, 77),
+    rgb(252, 21, 252)
+  );
+  border-color: rgb(230, 82, 82);
+  opacity: 0.7;
+}
+
+.message {
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+/* ----- DIV ----- */
+
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tasks-container h3 {
+  font-size: 1.3rem;
+  letter-spacing: 0.3rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+}
+ul li {
+  list-style-type: none;
+  cursor: pointer;
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+ul li:nth-child(odd) {
+  background-color: #07282c;
+}
+
+ul .checked {
+  text-decoration: line-through;
+}
+
+/* ----- DESKTOP ----- */
+
+@media screen and (min-width: 1024px) {
+  .main-section {
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tasks-container {
+    width: 70%;
+  }
+
+  .message {
+    font-size: 1.3rem;
+  }
+
+  .input-container {
+    width: 70%;
+  }
+
+  input[type="text"] {
+    width: 60%;
+  }
+
+  .tasks-container h3 {
+    margin: 2rem;
+    font-size: 2rem;
+  }
+
+  ul {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+  }
+
+  i {
+    padding-right: 2rem;
+  }
+}
+
+/* ----- TABLET ----- */
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+  .main-section {
+    margin-top: 2rem;
+  }
+
+  .message {
+    font-size: 1.1rem;
+  }
+
+  .tasks-container h3 {
+    margin: 2rem;
+    font-size: 2rem;
+  }
+
+  ul {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  i {
+    padding-right: 2rem;
+  }
+}
+
+/* ----- MOBILE ----- */
+
+@media screen and (max-width: 640px) {
+  .main-section {
+    margin-top: 1rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+
+  h3 {
+    margin: 1rem;
+  }
+
+  ul {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  i {
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 334px) {
+  #task {
+    margin-bottom: 1rem;
+  }
+}

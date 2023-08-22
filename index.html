@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- JS Script -->
+    <script src="./app.js" defer></script>
+    <title>Todo List</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Todo List</h1>
+    </header>
+    <section class="main-section">
+      <form class="input-container">
+        <input type="text" id="task" placeholder="Add Task..." />
+        <input type="submit" id="submit" value="Submit" />
+
+        <p class="message"></p>
+      </form>
+      <div class="tasks-container">
+        <h3>Tasks:</h3>
+        <ul class="list"></ul>
+      </div>
+    </section>
+  </body>
+</html>
